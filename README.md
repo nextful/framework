@@ -35,6 +35,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Contentful Content Model 
 
-
+<img src="content-models.jpeg" />
 
 
