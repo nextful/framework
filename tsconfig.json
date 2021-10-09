@@ -17,7 +17,9 @@
     "paths": {
       "@ncb/components/*": ["components/*"],
       "@ncb/api/*": ["api/*"],
-      "@ncb/modules/*": ["modules/*"]
+      "@ncb/modules/*": ["modules/*"],
+      "@ncb/lib/*": ["lib/*"],
+      "@ncb/types/*": ["types/*"]
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

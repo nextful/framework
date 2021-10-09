@@ -1,24 +1,35 @@
 import fetchStaticPages from '@ncb/api/helper/fetchStaticPages';
-import type { NextPage } from 'next';
+import convertContextParamsToSlug from '@ncb/api/helper/convertContextParamsToSlug';
+import type { NextPage, GetStaticPaths, GetStaticProps } from 'next';
+import fetchPageBySlug from '@ncb/api/helper/fetchPageBySlug';
+import { Page } from '@ncb/types/index';
 
-const DynamicPage: NextPage = () => {
+type PageProps = {
+    pageData: Page
+};
+
+const DynamicPage = ({ pageData }: PageProps) => {
   return (
    null
   )
 };
 
-export async function getStaticPaths() {
-    
+export const getStaticPaths: GetStaticPaths = async () => {
     return {
         paths: await fetchStaticPages(),
         fallback: false,
     };
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
+    const slug = convertContextParamsToSlug(context?.params);
+    const pageData = await fetchPageBySlug(slug);
+    
     return {
-        props: {},
+        props: {
+            pageData,
+        },
     };
-};
+}
 
 export default DynamicPage;
