@@ -11,6 +11,7 @@
   "dependencies": {
     "@apollo/client": "^3.4.15",
     "@contentful/rich-text-react-renderer": "^15.4.0",
+    "contentful-cli": "^1.9.20",
     "graphql": "^15.6.0",
     "next": "11.1.2",
     "next-pwa": "^5.3.1",
