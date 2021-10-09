@@ -1,7 +1,9 @@
 import PAGE_DATA from './PAGE_DATA';
 import STATIC_PATHS from './STATIC_PATHS';
+import MAIN_NAVIGATION from './MAIN_NAVIGATION';
 
 export {
     STATIC_PATHS,
     PAGE_DATA,
+    MAIN_NAVIGATION,
 };
