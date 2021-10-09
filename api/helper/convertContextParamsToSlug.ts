@@ -1,10 +1,10 @@
 import { ParsedUrlQuery } from 'querystring';
 
 // Every url param from context must have following pattern ^(slug[1-9]+|slug$)
-// In future version it should be possible to create dynamic page levels therefore param keys need to have 
-// a pattern. 
-// slug is the lowest leve 
-// 1+ are deeper levels 
+// In future version it should be possible to create dynamic page levels therefore param keys need to have
+// a pattern.
+// slug is the lowest level
+// 1+ are deeper levels
 
 const convertContextParamsToSlug = (params?: ParsedUrlQuery) => {
     if (!params) {
