@@ -1,6 +1,6 @@
 import fetchStaticPages from '@ncb/api/helper/fetchStaticPages';
 import convertContextParamsToSlug from '@ncb/api/helper/convertContextParamsToSlug';
-import type { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import fetchPageBySlug from '@ncb/api/helper/fetchPageBySlug';
 import { NavigationItem, Page } from '@ncb/types/index';
 import { fetchCreateMainNavigation } from '@ncb/modules/MainNavigation/helper';

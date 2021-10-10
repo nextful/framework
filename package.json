@@ -16,7 +16,7 @@
   "dependencies": {
     "@apollo/client": "^3.4.15",
     "@contentful/rich-text-react-renderer": "^15.4.0",
-    "contentful-cli": "^1.9.20",
+    "contentful-cli": "^0.29.0",
     "graphql": "^15.6.0",
     "husky": "^7.0.2",
     "next": "11.1.2",
