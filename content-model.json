@@ -179,7 +179,7 @@
         "id": "page",
         "type": "ContentType",
         "createdAt": "2021-10-09T13:42:39.317Z",
-        "updatedAt": "2021-10-09T13:46:32.206Z",
+        "updatedAt": "2021-10-09T20:43:07.969Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -187,8 +187,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2021-10-09T13:46:32.206Z",
+        "publishedVersion": 13,
+        "publishedAt": "2021-10-09T20:43:07.969Z",
         "firstPublishedAt": "2021-10-09T13:42:39.855Z",
         "createdBy": {
           "sys": {
@@ -204,8 +204,8 @@
             "id": "6llfnp93YEg8gEIPpEJBnw"
           }
         },
-        "publishedCounter": 4,
-        "version": 8,
+        "publishedCounter": 7,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -330,26 +330,21 @@
           "omitted": false
         },
         {
-          "id": "childs",
-          "name": "childs",
-          "type": "Array",
+          "id": "parent",
+          "name": "parent",
+          "type": "Link",
           "localized": false,
           "required": false,
           "validations": [
+            {
+              "linkContentType": [
+                "page"
+              ]
+            }
           ],
           "disabled": false,
           "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "page"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
+          "linkType": "Entry"
         }
       ]
     }
@@ -485,7 +480,7 @@
             "linkType": "Space"
           }
         },
-        "version": 8,
+        "version": 14,
         "createdAt": "2021-10-09T13:42:40.042Z",
         "createdBy": {
           "sys": {
@@ -494,7 +489,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2021-10-09T13:46:32.659Z",
+        "updatedAt": "2021-10-09T20:43:08.594Z",
         "updatedBy": {
           "sys": {
             "id": "6llfnp93YEg8gEIPpEJBnw",
@@ -562,8 +557,8 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "childs",
-          "widgetId": "entryLinksEditor",
+          "fieldId": "parent",
+          "widgetId": "entryLinkEditor",
           "widgetNamespace": "builtin"
         }
       ]
