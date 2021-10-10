@@ -1,5 +1,3 @@
-import { createClient } from "./client";
+import { createClient } from './client';
 
-export {
-    createClient,
-};
+export { createClient };

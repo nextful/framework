@@ -9,8 +9,7 @@ const tranformNavigationData = (data: NavigationItem[]) => {
         parent.childs = childs;
         childs.forEach((child: NavigationItem) => {
             findPossibleChildByParentId(child);
-        })
-        
+        });
     };
 
     const navigationData = data.filter((item: NavigationItem) => {

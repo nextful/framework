@@ -1,21 +1,21 @@
 export type Seo = {
     metaTitle: string;
     metaDescription: string;
-}
+};
 
 export type Article = {
-    sys:  {
+    sys: {
         id: string;
     };
     items: Module[];
-}
+};
 
 export interface Module {
     sys: {
         id: string;
     };
     __typename: string;
-};
+}
 
 export type Page = {
     sys: {
@@ -24,8 +24,8 @@ export type Page = {
     seo: Seo;
     articlesCollection: {
         items: Article[];
-    }
-}
+    };
+};
 
 export type NavigationItem = {
     sys: {
@@ -34,9 +34,9 @@ export type NavigationItem = {
     title: string;
     slug: string;
     childs?: NavigationItem[];
-    parent: null| {
+    parent: null | {
         sys: {
             id: string;
         };
-    }
-}
+    };
+};

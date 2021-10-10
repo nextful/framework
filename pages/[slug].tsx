@@ -12,10 +12,8 @@ type PageProps = {
     footerNavigation: NavigationItem[];
 };
 
-const DynamicPage = ({ pageData, mainNavigation, footerNavigation }: PageProps) => {    
-  return (
-   null
-  )
+const DynamicPage = ({ pageData, mainNavigation, footerNavigation }: PageProps) => {
+    return null;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -28,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
     const slug = convertContextParamsToSlug(context?.params);
     const pageData = await fetchPageBySlug(slug);
-    
+
     return {
         props: {
             pageData,
@@ -36,6 +34,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
             footerNavigation: await fetchCreateFooterNavigation(),
         },
     };
-}
+};
 
 export default DynamicPage;

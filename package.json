@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier:check": "node_modules/.bin/prettier --check './**/*.ts{,x}'",
+    "prettier:format": "node_modules/.bin/prettier --write './**/*.ts{,x}'"
   },
   "dependencies": {
     "@apollo/client": "^3.4.15",

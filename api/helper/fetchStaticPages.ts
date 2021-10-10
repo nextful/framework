@@ -14,12 +14,13 @@ const fetchStaticPages = async () => {
         return false;
     }
 
-    return data?.data?.pageCollection?.items.map((pageItem: any) => { // TODO: ANY
+    return data?.data?.pageCollection?.items.map((pageItem: any) => {
+        // TODO: ANY
         return {
             params: {
                 slug: pageItem.slug,
-            }
-        }
+            },
+        };
     });
 };
 
