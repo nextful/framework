@@ -14,7 +14,7 @@ const fetchFooterNavigation = async () => {
         return false;
     }
 
-    return data?.data?.pageCollection?.items
+    return data?.data?.pageCollection?.items;
 };
 
 export default fetchFooterNavigation;

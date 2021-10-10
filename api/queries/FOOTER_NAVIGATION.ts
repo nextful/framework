@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 const FOOTER_NAVIGATION = gql`
     query mainNavigation {
-        pageCollection(limit: 1000, order: index_ASC, where:{ footerNavigation: true }) {
+        pageCollection(limit: 1000, order: index_ASC, where: { footerNavigation: true }) {
             items {
                 sys {
                     id

@@ -11,8 +11,7 @@ const convertContextParamsToSlug = (params?: ParsedUrlQuery) => {
         throw new Error('Params not defined');
     }
 
-    return Object
-        .keys(params)
+    return Object.keys(params)
         .sort() // keys will be sorted by their level slug/slug1/slug2 ..
         .map((key: string) => params[key])
         .join('/');
