@@ -1,7 +1,6 @@
 import fetchStaticPages from '@ncb/api/helper/fetchStaticPages';
 import convertContextParamsToSlug from '@ncb/api/helper/convertContextParamsToSlug';
 import type { GetStaticPaths, GetStaticProps } from 'next';
-import { NextSeo } from 'next-seo';
 import fetchPageBySlug from '@ncb/api/helper/fetchPageBySlug';
 import { NavigationItem, Page } from '@ncb/types/index';
 import { fetchCreateMainNavigation } from '@ncb/modules/MainNavigation/helper';
@@ -14,12 +13,7 @@ type PageProps = {
 };
 
 const DynamicPage = ({ pageData, mainNavigation, footerNavigation }: PageProps) => {
-    const { seo } = pageData;
-    return (
-        <>
-            <NextSeo title={seo?.metaTitle} description={seo?.metaDescription} />
-        </>
-    );
+    return null;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
