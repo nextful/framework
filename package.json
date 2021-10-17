@@ -16,7 +16,7 @@
   "dependencies": {
     "@apollo/client": "^3.4.15",
     "@contentful/rich-text-react-renderer": "^15.4.0",
-    "contentful-cli": "^0.29.0",
+    "contentful-cli": "^1.9.22",
     "graphql": "^15.6.0",
     "husky": "^7.0.2",
     "next": "11.1.2",
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@types/react": "17.0.24",
+    "@types/styled-components": "^5.1.15",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "typescript": "4.4.3"
