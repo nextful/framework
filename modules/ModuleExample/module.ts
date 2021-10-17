@@ -15,6 +15,14 @@ const Module: ContentfulModule = {
                 headline
                 subline
             }
+            test: moduleExample(id: $id) {
+                sys {
+                    id
+                }
+                __typename
+                headline
+                subline
+            }
         }
     `,
 };

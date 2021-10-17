@@ -8,9 +8,9 @@ const renderArticles = (items?: ArticleType[]) => {
 
     return (
         <>
-            {items.map((item) => (
-                <Article key={item.sys.id} {...item} />
-            ))}
+            {items.map((item) => {
+                return <Article key={item.sys.id} {...item} />;
+            })}
         </>
     );
 };

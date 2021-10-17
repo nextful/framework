@@ -1,7 +1,7 @@
 import { ReactPropTypes } from 'react';
 
 const ModuleExample = ({ ...props }: any) => {
-    return <div>Hello World</div>;
+    return <div>{props.moduleExample.headline}</div>;
 };
 
 export default ModuleExample;
