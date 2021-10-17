@@ -1,3 +1,6 @@
+import { DocumentNode } from 'graphql';
+import { ReactNode } from 'react';
+
 export type Seo = {
     metaTitle: string;
     metaDescription: string;
@@ -40,3 +43,9 @@ export type NavigationItem = {
         };
     };
 };
+
+export interface ContentfulModule {
+    component: ReactNode;
+    typename: string;
+    query: DocumentNode;
+}
