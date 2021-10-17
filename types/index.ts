@@ -6,6 +6,23 @@ export type Seo = {
     metaDescription: string;
 };
 
+export type ContentfulImage = {
+    url: string;
+    title: string;
+    width: number;
+    height: number;
+};
+
+export type OpenGraph = {
+    title?: string;
+    url?: string;
+    description?: string;
+    type?: string;
+    imagesCollection?: {
+        items: ContentfulImage[];
+    };
+};
+
 export type Article = {
     sys: {
         id: string;
@@ -27,6 +44,7 @@ export type Page = {
         id: string;
     };
     seo: Seo;
+    openGraph: OpenGraph;
     articlesCollection: {
         items: Article[];
     };
