@@ -11,7 +11,8 @@
     "prettier:check": "node_modules/.bin/prettier --check './**/*.ts{,x}'",
     "prettier:format": "node_modules/.bin/prettier --write './**/*.ts{,x}'",
     "export:content-model": "contentful space export --skip-content --skip-roles --skip-webhooks --content-file=content-model.json --space-id",
-    "check:all": "yarn prettier:check"
+    "check:all": "yarn prettier:check",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@apollo/client": "^3.4.15",
@@ -27,8 +28,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-breakpoints": "^10.0.1",
-    "styled-components": "^5.3.1",
-    "postbuild": "next-sitemap"
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@types/react": "17.0.24",
