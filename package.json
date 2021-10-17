@@ -10,12 +10,13 @@
     "prepare": "husky install",
     "prettier:check": "node_modules/.bin/prettier --check './**/*.ts{,x}'",
     "prettier:format": "node_modules/.bin/prettier --write './**/*.ts{,x}'",
+    "export:content-model": "contentful space export --skip-content --skip-roles --skip-webhooks --content-file=content-model.json --space-id",
     "check:all": "yarn prettier:check"
   },
   "dependencies": {
     "@apollo/client": "^3.4.15",
     "@contentful/rich-text-react-renderer": "^15.4.0",
-    "contentful-cli": "^1.9.20",
+    "contentful-cli": "^1.9.22",
     "graphql": "^15.6.0",
     "husky": "^7.0.2",
     "next": "11.1.2",

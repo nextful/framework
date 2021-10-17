@@ -1,3 +1,6 @@
+import { DocumentNode } from 'graphql';
+import { FunctionComponent, ReactNode } from 'react';
+
 export type Seo = {
     metaTitle: string;
     metaDescription: string;
@@ -7,7 +10,9 @@ export type Article = {
     sys: {
         id: string;
     };
-    items: Module[];
+    modulesCollection: {
+        items: Module[];
+    };
 };
 
 export interface Module {
@@ -40,3 +45,9 @@ export type NavigationItem = {
         };
     };
 };
+
+export interface ContentfulModule {
+    component: FunctionComponent;
+    typename: string;
+    query: DocumentNode;
+}

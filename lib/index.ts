@@ -1,3 +1,4 @@
 import isValidUrlParamKey from './isValidUrlParamKey';
+import findContentfulModuleByTypename from './findContentfulModuleByTypename';
 
-export { isValidUrlParamKey };
+export { isValidUrlParamKey, findContentfulModuleByTypename };
