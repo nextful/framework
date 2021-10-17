@@ -51,7 +51,7 @@ const fetchPageBySlug = async (slug: string) => {
                 });
 
                 // merge data fetched by base query and module query
-                module[i] = { ...module[i], ...moduleData };
+                module[i] = { ...module[i], ...moduleData?.data };
             }
         }
     }

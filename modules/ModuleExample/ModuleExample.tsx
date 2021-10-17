@@ -1,15 +1,7 @@
-type Props = {
-    headline?: string;
-    subline?: string;
-};
+import { ReactPropTypes } from 'react';
 
-const ModuleExample = ({ headline, subline }: Props) => {
-    return (
-        <div>
-            <h1>{headline}</h1>
-            <span>{subline}</span>
-        </div>
-    );
+const ModuleExample = ({ ...props }: any) => {
+    return <div>Hello World</div>;
 };
 
 export default ModuleExample;
