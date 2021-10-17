@@ -1,6 +1,7 @@
 import { createClient } from '..';
 import { PAGE_DATA } from '../queries';
 import Modules from '@ncb/modules/mapping';
+import findContentfulModuleByTypename from '@ncb/lib/findContentfulModuleByTypename';
 
 const fetchPageBySlug = async (slug: string) => {
     if (!slug && slug !== '') {
@@ -33,9 +34,24 @@ const fetchPageBySlug = async (slug: string) => {
                 continue;
             }
 
-            for (const module of modules) {
-                const internalModule = Modules.find((item) => item.typename === module.__typename);
-                console.log(internalModule);
+            for (let i = 0; i < modules.length; i++) {
+                const module = modules[i];
+                const internalModule = findContentfulModuleByTypename(module.__typename, Modules);
+
+                if (!internalModule) {
+                    console.error(`Could not find module with ${module?.__typename}`);
+                    continue;
+                }
+
+                const moduleData = await client.query({
+                    query: internalModule.query,
+                    variables: {
+                        id: module.sys.id,
+                    },
+                });
+
+                // merge data fetched by base query and module query
+                module[i] = { ...module[i], ...moduleData };
             }
         }
     }

@@ -6,7 +6,7 @@ const Module: ContentfulModule = {
     typename: 'ModuleExample',
     component: ModuleExample,
     query: gql`
-        query moduleExampleById($id: String) {
+        query moduleExampleById($id: String!) {
             moduleExample(id: $id) {
                 sys {
                     id
