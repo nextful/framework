@@ -33,3 +33,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+/pages/\[slug\]/*
+pages/\[slug\].tsx
+pages/\[slug\]

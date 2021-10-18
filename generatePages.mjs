@@ -62,13 +62,13 @@ const run = async () => {
         }
 
         let dirPath = `${DIR}/pages/`;
-        for(let dirLevel = 0; dirLevel < level; dirLevel++) {
+        for (let dirLevel = 0; dirLevel < level; dirLevel++) {
             dirPath += `[slug${dirLevel === 0 ? '' : dirLevel}]/`
         }
 
         fs.mkdirSync(dirPath, { recursive: true });
         const fileContent = fs.readFileSync(`${DIR}/templates/slug.tsx`,'utf8')
-        fs.writeFileSync(`[${dirPath}slug${level}].tsx`, fileContent);
+        fs.writeFileSync(`${dirPath}[slug${level}].tsx`, fileContent);
     };
 
 };
