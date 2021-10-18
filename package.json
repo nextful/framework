@@ -6,7 +6,7 @@
     "generate:level": "node generatePages.mjs",
     "dev": "npm run generate:level && next dev",
     "build": "npm run generate:level && next build",
-    "start": "npm run generate:level &&  next start",
+    "start": "npm run generate:level && next start",
     "lint": "next lint",
     "prepare": "husky install",
     "prettier:check": "node_modules/.bin/prettier --check './**/*.ts{,x}'",

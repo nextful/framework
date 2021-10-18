@@ -1,7 +1,7 @@
 import { createClient } from '..';
 import { STATIC_PATHS } from '../queries';
 
-const fetchStaticPages = async () => {
+const fetchStaticPages = async (level?: number) => {
     let data: any = []; // TODO: Remove any!
     const client = createClient();
 
