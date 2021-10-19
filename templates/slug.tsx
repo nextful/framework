@@ -9,6 +9,8 @@ import Layout from '@ncb/components/Layout';
 import { renderArticles } from '@ncb/lib/renderer';
 import { NextSeo } from 'next-seo';
 
+const path = require('path');
+
 type PageProps = {
     pageData: Page;
     mainNavigation: NavigationItem[];
@@ -40,8 +42,12 @@ const DynamicPage = ({ pageData, mainNavigation, footerNavigation }: PageProps) 
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+    const file = path.basename(__filename);
+    const num = /\d+/;
+    const level = file.match(num);
+
     return {
-        paths: await fetchStaticPages(),
+        paths: await fetchStaticPages(level),
         fallback: false,
     };
 };
