@@ -2,7 +2,7 @@ import { createClient } from '..';
 import { STATIC_PATHS } from '../queries';
 
 const fetchStaticPages = async (level?: any) => {
-    const _level = level === null ? 0 : parseInt(level[0]);
+    const _level = level === null ? 0 : parseInt(level[0], 10);
 
     let data: any = []; // TODO: Remove any!
     const client = createClient();
