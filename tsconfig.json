@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@ncb/components/*": ["components/*"],
-      "@ncb/api/*": ["api/*"],
+      "@ncb/api/*": ["lib/api/*"],
       "@ncb/modules/*": ["modules/*"],
       "@ncb/lib/*": ["lib/*"],
       "@ncb/types/*": ["types/*"]
