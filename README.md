@@ -1,4 +1,4 @@
-# Next js content website boilerplat
+# Next js content website boilerplate
 
 This is a perfect start for your next website project with contentful and next.js. 
 
