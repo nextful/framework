@@ -17,8 +17,17 @@ This is a perfect start for your next website project with contentful and next.j
 5. [ Support. ](#support)
 
 ## Prerequisites
+- you need to be able to run next.js 
+- you need to have a contentful space 
 
 ## Setup
+
+- Create an empty space for your project or pick
+- Create an api key for your space
+- Clone this repo via (Use this template or clone it)
+- create a file called `.env` in your root 
+- Store following values CONTENTFUL_ACCESS_TOKEN and CONTENTFUL_SPACE_ID in your `.env`
+- the values are shown on contentful in your api key
 
 ## Content model
 
