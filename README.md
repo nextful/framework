@@ -17,3 +17,11 @@ This is a perfect start for your next website project with contentful and next.j
 5. [ Support. ](#support)
 
 ## Prerequisites
+
+## Setup
+
+## Content model
+
+## Create new module
+
+## Support
