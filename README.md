@@ -8,6 +8,8 @@ This is a perfect start for your next website project with contentful and next.j
 - ✅ comes with a easy to use component mapper 
 - ✅ makes no decisions about your html structure or styles 
 
+## Table of contents 
+
 1. [ Prerequisites. ](#prerequisites)
 2. [ Setup. ](#setup)
 3. [ Content model. ](#content-model)
