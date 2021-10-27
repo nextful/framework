@@ -4,13 +4,13 @@
 
 ---
 
-- ✅ready to use content model for website (page, SEO, open graph, articles) 
-- ✅ generates main and footer navigation based on your contentful content 
-- ✅ generates dynamic pages based on your slugs in contentful 
-- ✅ comes with an easy to use component mapper 
-- ✅ makes no decisions about your html structure or styles 
+- ✅ready to use content model for website (page, SEO, open graph, articles)
+- ✅ generates main and footer navigation based on your contentful content
+- ✅ generates dynamic pages based on your slugs in contentful
+- ✅ comes with an easy to use component mapper
+- ✅ makes no decisions about your html structure or styles
 
-## Table of contents 
+## Table of contents
 
 1. [ Prerequisites. ](#prerequisites)
 2. [ Setup. ](#setup)
@@ -20,8 +20,8 @@
 5. [ Showcases. ](#showcases)
 
 ## Prerequisites
-- you need to be able to run next.js 
-- you need to have a contentful space 
+- you need to be able to run next.js
+- you need to have a contentful space
 
 ## Setup
 
@@ -29,11 +29,11 @@
 - Create an API key for your space
 - Clone this repo via (Use this template or clone it)
 - Install dependencies via `npm install`
-- Install contentful-cli globally `npm install -g contentful-cli` 
+- Install contentful-cli globally `npm install -g contentful-cli`
 - Login in via `contentful login`
 - Upload the content model `contentful space export --skip-content --skip-roles --skip-webhooks --content-file=content-model.json --space-id=YOUR_SPACE_ID` (replace YOUR_SPACE_ID with your space id!)
 - Congrats you can now create pages, articles, and more
-- create a file called `.env` in your root 
+- create a file called `.env` in your root
 - Store the following values CONTENTFUL_ACCESS_TOKEN and CONTENTFUL_SPACE_ID in your `.env`
 - the values are shown on contentful in your API key
 - you are now able to develop via `yarn dev`
@@ -44,12 +44,12 @@
 
 ## Create a new module
 
-To make a start easier. We placed an example module in the project. 
-You can delete it if you want. 
+To make a start easier. We placed an example module in the project.
+You can delete it if you want.
 
-Let´s see how we can add our module with the example module. 
+Let´s see how we can add our module with the example module.
 
-1. First, create a new content module in contentful. Fields are up to you. 
+1. First, create a new content module in contentful. Fields are up to you.
 Just create the fields you need. In your case, we have three fields (title, headline, subline)
 
 2. To keep a better structure, we prefix our module with `Module: Example`. Contentful will create a content model with the id `moduleExample` and typename`ModuleExample`.
@@ -58,7 +58,7 @@ Just create the fields you need. In your case, we have three fields (title, head
 
 4. Create your main component `ModuleExample/ModuleExample.tsx`.
 
-``` tsx 
+``` tsx
 import { ReactPropTypes } from 'react';
 
 const ModuleExample = ({ ...props }: any) => {
@@ -71,7 +71,7 @@ export default ModuleExample;
 5. Now, let us create the module file `ModuleExample/module.ts`.
 
 ``` ts
-import { ContentfulModule } from '@ncb/types/index';
+import { ContentfulModule } from '@nextful/types/index';
 import gql from 'graphql-tag';
 import ModuleExample from './ModuleExample';
 
@@ -93,13 +93,13 @@ export default Module;
 
 There you create an object from type `ContentfulModule` with:
 
-- typename: Typename of the content model 
-- component: Your component 
+- typename: Typename of the content model
+- component: Your component
 - query: A graphql query. As an argument, it will get the ID of the content element. In our case, we want to fetch the headline and subline.
 
-6. Now, you need to register your component. Import the module into `modules/mapping.ts` and export every module in an array 
+6. Now, you need to register your component. Import the module into `modules/mapping.ts` and export every module in an array
 
-``` ts 
+``` ts
 import { Module as ModuleExample } from './ModuleExample';
 
 export default [ModuleExample];

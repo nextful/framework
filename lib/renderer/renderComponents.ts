@@ -1,4 +1,4 @@
-import { ContentfulModule } from '@ncb/types/index';
+import { ContentfulModule } from '@nextful/types/index';
 import { createElement } from 'react';
 import { findContentfulModuleByTypename } from '..';
 

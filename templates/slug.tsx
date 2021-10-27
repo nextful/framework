@@ -1,12 +1,12 @@
-import fetchStaticPages from '@ncb/api/helper/fetchStaticPages';
-import convertContextParamsToSlug from '@ncb/api/helper/convertContextParamsToSlug';
+import fetchStaticPages from '@nextful/api/helper/fetchStaticPages';
+import convertContextParamsToSlug from '@nextful/api/helper/convertContextParamsToSlug';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import fetchPageBySlug from '@ncb/api/helper/fetchPageBySlug';
-import { NavigationItem, Page } from '@ncb/types/index';
-import { fetchCreateMainNavigation } from '@ncb/modules/MainNavigation/helper';
-import { fetchCreateFooterNavigation } from '@ncb/modules/FooterNavigation/helper';
-import Layout from '@ncb/components/Layout';
-import { renderArticles } from '@ncb/lib/renderer';
+import fetchPageBySlug from '@nextful/api/helper/fetchPageBySlug';
+import { NavigationItem, Page } from '@nextful/types/index';
+import { fetchCreateMainNavigation } from '@nextful/modules/MainNavigation/helper';
+import { fetchCreateFooterNavigation } from '@nextful/modules/FooterNavigation/helper';
+import Layout from '@nextful/components/Layout';
+import { renderArticles } from '@nextful/lib/renderer';
 import { NextSeo } from 'next-seo';
 
 const path = require('path');

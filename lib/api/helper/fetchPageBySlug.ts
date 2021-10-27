@@ -1,7 +1,7 @@
 import { createClient } from '..';
 import { PAGE_DATA } from '../queries';
-import Modules from '@ncb/modules/mapping';
-import findContentfulModuleByTypename from '@ncb/lib/findContentfulModuleByTypename';
+import Modules from '@nextful/modules/mapping';
+import findContentfulModuleByTypename from '@nextful/lib/findContentfulModuleByTypename';
 
 const fetchPageBySlug = async (slug: string) => {
     if (!slug && slug !== '') {

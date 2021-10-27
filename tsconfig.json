@@ -15,11 +15,11 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@ncb/components/*": ["components/*"],
-      "@ncb/api/*": ["lib/api/*"],
-      "@ncb/modules/*": ["modules/*"],
-      "@ncb/lib/*": ["lib/*"],
-      "@ncb/types/*": ["types/*"]
+      "@nextful/components/*": ["components/*"],
+      "@nextful/api/*": ["lib/api/*"],
+      "@nextful/modules/*": ["modules/*"],
+      "@nextful/lib/*": ["lib/*"],
+      "@nextful/types/*": ["types/*"]
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
