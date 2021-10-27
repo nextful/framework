@@ -1,6 +1,6 @@
 <p align="center"><img width="300" src="nextful-logo.svg" /></p>
 
-<p align="center">Next*ful* is a small framework on top of next.js for building websites with contentful.</p>
+<p align="center">Nextful is a small framework on top of next.js for building websites with contentful.</p>
 
 ---
 
