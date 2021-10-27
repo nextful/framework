@@ -1,6 +1,8 @@
-# Nextful framework
+<p align="center"><img width="300" src="nextful-logo.svg" /></p>
 
-Next*ful* is a small framework on top of next.js for building websites with contentful.
+<p align="center">Next*ful* is a small framework on top of next.js for building websites with contentful.</p>
+
+---
 
 - ✅ready to use content model for website (page, SEO, open graph, articles) 
 - ✅ generates main and footer navigation based on your contentful content 
