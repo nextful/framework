@@ -1,10 +1,10 @@
-import fetchStaticPages from '@ncb/api/helper/fetchStaticPages';
-import convertContextParamsToSlug from '@ncb/api/helper/convertContextParamsToSlug';
+import fetchStaticPages from '@nextful/api/helper/fetchStaticPages';
+import convertContextParamsToSlug from '@nextful/api/helper/convertContextParamsToSlug';
 import type { GetStaticPaths, GetStaticProps } from 'next';
-import fetchPageBySlug from '@ncb/api/helper/fetchPageBySlug';
-import { NavigationItem, Page } from '@ncb/types/index';
-import { fetchCreateMainNavigation } from '@ncb/modules/MainNavigation/helper';
-import { fetchCreateFooterNavigation } from '@ncb/modules/FooterNavigation/helper';
+import fetchPageBySlug from '@nextful/api/helper/fetchPageBySlug';
+import { NavigationItem, Page } from '@nextful/types/index';
+import { fetchCreateMainNavigation } from '@nextful/modules/MainNavigation/helper';
+import { fetchCreateFooterNavigation } from '@nextful/modules/FooterNavigation/helper';
 
 type PageProps = {
     pageData: Page;

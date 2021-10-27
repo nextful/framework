@@ -1,5 +1,5 @@
-import fetchFooterNavigation from '@ncb/api/helper/fetchMainNavigation';
-import tranformNavigationData from '@ncb/lib/tranformNavigationData';
+import fetchFooterNavigation from '@nextful/api/helper/fetchMainNavigation';
+import tranformNavigationData from '@nextful/lib/tranformNavigationData';
 
 const fetchCreateFooterNavigation = async () => {
     const data = await fetchFooterNavigation();
