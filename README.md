@@ -15,6 +15,7 @@ This repository is a perfect start for your next website project with contentful
 3. [ Content model. ](#content-model)
 4. [ Create a new module. ](#create-a-new-module)
 5. [ Support. ](#support)
+5. [ Showcases. ](#showcases)
 
 ## Prerequisites
 - you need to be able to run next.js 
@@ -107,3 +108,7 @@ export default [ModuleExample];
 Let us know if you need support with your setup. Create an issue or contact janmarkuslanger10121994@gmail.com
 
 We are also happy to discuss new features. Therefore you can create a new comment in your Featuee ideas discussion: https://github.com/contentfulnext/nextjs-contentful-website-boiler/discussions/47
+
+## Showcases
+
+- https://www.kaizen-kampfkunst.de/startseite
