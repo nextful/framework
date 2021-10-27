@@ -1,5 +1,5 @@
-import { Article as ArticleType } from '@ncb/types/index';
-import Article from '@ncb/components/Article';
+import { Article as ArticleType } from '@nextful/types/index';
+import Article from '@nextful/components/Article';
 
 const renderArticles = (items?: ArticleType[]) => {
     if (!items) {
