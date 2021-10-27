@@ -3,24 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "generate:level": "node generatePages.mjs",
+    "dev": "npm run generate:level && next dev",
+    "build": "npm run generate:level && next build",
+    "start": "npm run generate:level && next start",
     "lint": "next lint",
     "prepare": "husky install",
     "prettier:check": "node_modules/.bin/prettier --check './**/*.ts{,x}'",
     "prettier:format": "node_modules/.bin/prettier --write './**/*.ts{,x}'",
-    "check:all": "yarn prettier:check"
+    "export:content-model": "contentful space export --skip-content --skip-roles --skip-webhooks --content-file=content-model.json --space-id",
+    "check:all": "yarn prettier:check",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@apollo/client": "^3.4.15",
     "@contentful/rich-text-react-renderer": "^15.4.0",
-    "contentful-cli": "^1.9.20",
+    "contentful-cli": "^1.9.22",
+    "cross-fetch": "^3.1.4",
     "graphql": "^15.6.0",
     "husky": "^7.0.2",
     "next": "11.1.2",
     "next-pwa": "^5.3.1",
     "next-seo": "^4.28.1",
+    "next-sitemap": "^1.6.184",
     "querystring": "^0.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -29,6 +34,8 @@
   },
   "devDependencies": {
     "@types/react": "17.0.24",
+    "@types/styled-components": "^5.1.15",
+    "dotenv": "^10.0.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "typescript": "4.4.3"

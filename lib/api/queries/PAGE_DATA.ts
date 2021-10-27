@@ -11,6 +11,20 @@ const PAGE_DATA = gql`
                     metaTitle
                     metaDescription
                 }
+                openGraph {
+                    title
+                    url
+                    type
+                    description
+                    imagesCollection {
+                        items {
+                            url
+                            width
+                            height
+                            title
+                        }
+                    }
+                }
                 articlesCollection {
                     items {
                         sys {

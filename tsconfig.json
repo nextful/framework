@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@nextful/components/*": ["components/*"],
-      "@nextful/api/*": ["api/*"],
+      "@nextful/api/*": ["lib/api/*"],
       "@nextful/modules/*": ["modules/*"],
       "@nextful/lib/*": ["lib/*"],
       "@nextful/types/*": ["types/*"]

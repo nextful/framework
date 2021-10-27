@@ -1,13 +1,35 @@
+import { DocumentNode } from 'graphql';
+import { FunctionComponent } from 'react';
+
 export type Seo = {
     metaTitle: string;
     metaDescription: string;
+};
+
+export type ContentfulImage = {
+    url: string;
+    title: string;
+    width: number;
+    height: number;
+};
+
+export type OpenGraph = {
+    title?: string;
+    url?: string;
+    description?: string;
+    type?: string;
+    imagesCollection?: {
+        items: ContentfulImage[];
+    };
 };
 
 export type Article = {
     sys: {
         id: string;
     };
-    items: Module[];
+    modulesCollection: {
+        items: Module[];
+    };
 };
 
 export interface Module {
@@ -22,6 +44,7 @@ export type Page = {
         id: string;
     };
     seo: Seo;
+    openGraph: OpenGraph;
     articlesCollection: {
         items: Article[];
     };
@@ -40,3 +63,9 @@ export type NavigationItem = {
         };
     };
 };
+
+export interface ContentfulModule {
+    component: FunctionComponent;
+    typename: string;
+    query: DocumentNode;
+}
