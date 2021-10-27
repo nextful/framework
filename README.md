@@ -1,6 +1,6 @@
-# Next js content website boilerplate
+# Nextful framework
 
-This repository is a perfect start for your next website project with contentful and next.js. 
+Next*ful* is a small framework on top of next.js for building websites with contentful.
 
 - ✅ready to use content model for website (page, SEO, open graph, articles) 
 - ✅ generates main and footer navigation based on your contentful content 
