@@ -31,7 +31,7 @@
 - Install dependencies via `npm install`
 - Install contentful-cli globally `npm install -g contentful-cli`
 - Login in via `contentful login`
-- Upload the content model `contentful space export --skip-content --skip-roles --skip-webhooks --content-file=content-model.json --space-id=YOUR_SPACE_ID` (replace YOUR_SPACE_ID with your space id!)
+- Upload the content model `contentful space import --skip-content --skip-roles --skip-webhooks --content-file=content-model.json --space-id=YOUR_SPACE_ID` (replace YOUR_SPACE_ID with your space id!)
 - Congrats you can now create pages, articles, and more
 - create a file called `.env` in your root
 - Store the following values CONTENTFUL_ACCESS_TOKEN and CONTENTFUL_SPACE_ID in your `.env`
