@@ -30,7 +30,7 @@ const PAGE_DATA = gql`
                         sys {
                             id
                         }
-                        ...on Article {
+                        ... on Article {
                             modulesCollection {
                                 items {
                                     sys {
