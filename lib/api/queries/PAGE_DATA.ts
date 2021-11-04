@@ -30,12 +30,14 @@ const PAGE_DATA = gql`
                         sys {
                             id
                         }
-                        modulesCollection {
-                            items {
-                                sys {
-                                    id
+                        ...on Article {
+                            modulesCollection {
+                                items {
+                                    sys {
+                                        id
+                                    }
+                                    __typename
                                 }
-                                __typename
                             }
                         }
                     }
