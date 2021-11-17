@@ -16,21 +16,21 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@apollo/client": "^3.4.15",
-    "@contentful/rich-text-react-renderer": "^15.4.0",
-    "contentful-cli": "^1.9.22",
+    "@apollo/client": "^3.4.17",
+    "@contentful/rich-text-react-renderer": "^15.6.2",
+    "contentful-cli": "^1.9.31",
     "cross-fetch": "^3.1.4",
-    "graphql": "^15.6.0",
-    "husky": "^7.0.2",
+    "graphql": "^15.7.2",
+    "husky": "^7.0.4",
     "next": "11.1.2",
-    "next-pwa": "^5.3.1",
+    "next-pwa": "^5.4.0",
     "next-seo": "^4.28.1",
-    "next-sitemap": "^1.6.184",
+    "next-sitemap": "^1.6.203",
     "querystring": "^0.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-breakpoints": "^10.0.1",
-    "styled-components": "^5.3.1"
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@types/react": "17.0.24",
