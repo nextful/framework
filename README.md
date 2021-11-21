@@ -21,7 +21,7 @@
 
 ## Prerequisites
 - you need to be able to run next.js
-- you need to have a contentful space
+- you need to have a clean new contentful space (locale must be "en-US", it can be changed later)
 
 ## Setup
 
@@ -114,3 +114,4 @@ We are also happy to discuss new features. Therefore you can create a new commen
 ## Showcases
 
 - https://www.kaizen-kampfkunst.de/startseite
+- https://schuettler.net/startseite
