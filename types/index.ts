@@ -63,9 +63,3 @@ export type NavigationItem = {
         };
     };
 };
-
-export interface ContentfulModule {
-    component: FunctionComponent;
-    typename: string;
-    query: DocumentNode;
-}

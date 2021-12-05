@@ -1,7 +1,6 @@
 import { createClient } from '..';
 import { PAGE_DATA } from '../queries';
 import Modules from '@nextful/modules/mapping';
-import findContentfulModuleByTypename from '@nextful/lib/findContentfulModuleByTypename';
 
 const fetchPageBySlug = async (slug: string) => {
     if (!slug && slug !== '') {
@@ -36,7 +35,8 @@ const fetchPageBySlug = async (slug: string) => {
 
             for (let i = 0; i < modules.length; i++) {
                 const module = modules[i];
-                const internalModule = findContentfulModuleByTypename(module.__typename, Modules);
+
+                const internalModule = Modules?.find((internal: any) => module.typename === internal.__typename);
 
                 if (!internalModule) {
                     console.error(`Could not find module with ${module?.__typename}`);
