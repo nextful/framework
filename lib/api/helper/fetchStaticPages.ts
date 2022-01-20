@@ -14,17 +14,13 @@ const fetchStaticPages = async () => {
         return [];
     }
 
-    const items = data?.data?.pageCollection?.items.map((pageItem: any) => {
+    return data?.data?.pageCollection?.items.map((pageItem: any) => {
         return {
             params: {
                 slugs: pageItem.slug.split('/'),
             },
         };
     });
-
-    console.log('IREMS', items);
-
-    return items;
 };
 
 export default fetchStaticPages;
