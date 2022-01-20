@@ -1,5 +1,4 @@
 import fetchStaticPages from '@nextful/api/helper/fetchStaticPages';
-import convertContextParamsToSlug from '@nextful/api/helper/convertContextParamsToSlug';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import fetchPageBySlug from '@nextful/api/helper/fetchPageBySlug';
 import { NavigationItem, Page } from '@nextful/types/index';
@@ -42,18 +41,14 @@ const DynamicPage = ({ pageData, mainNavigation, footerNavigation }: PageProps) 
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const file = path.basename(__filename);
-    const num = /\d+/;
-    const level = file.match(num);
-
     return {
-        paths: await fetchStaticPages(level),
+        paths: await fetchStaticPages(),
         fallback: false,
     };
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const slug = convertContextParamsToSlug(context?.params);
+    const slug = (context?.params?.slugs as string[])?.join('/');
     const pageData = await fetchPageBySlug(slug);
 
     return {
