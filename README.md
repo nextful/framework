@@ -71,31 +71,40 @@ export default ModuleExample;
 5. Now, let us create the module file `ModuleExample/module.ts`.
 
 ``` ts
-import { ContentfulModule } from '@nextful/types/index';
+import { createClient } from '@nextful/api/client';
+import { createModule } from '@nextful/packages/module-connector';
 import gql from 'graphql-tag';
 import ModuleExample from './ModuleExample';
 
-const Module: ContentfulModule = {
+const client = createClient();
+
+const Module = createModule({
     typename: 'ModuleExample',
     component: ModuleExample,
+    async fetch(id) {
+        // fetch your data via grapql or rest or fetch data from a different data source
+        const dataOne = await somethingIWantToFetch();
+        const dataTwo = await somethingIWantToFetchToo();
+
+        // everything you return here will be injected into the component
+        return {
+            ...dataOne,
+            ...dataTwo
+        };
+    },
     query: gql`
-        query moduleExampleById($id: String!) {
-            moduleExample(id: $id) {
-                headline
-                subline
-            }
-        }
+        
     `,
-};
+}9;
 
 export default Module;
 ```
 
-There you create an object from type `ContentfulModule` with:
+There you create an object from type `NextModule` with:
 
 - typename: Typename of the content model
 - component: Your component
-- query: A graphql query. As an argument, it will get the ID of the content element. In our case, we want to fetch the headline and subline.
+- fetch(id): A function that gets the id of the module as an id. Everything returned from this function will be injected into the component
 
 6. Now, you need to register your component. Import the module into `modules/mapping.ts` and export every module in an array
 

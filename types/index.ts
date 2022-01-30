@@ -1,5 +1,5 @@
 import { DocumentNode } from 'graphql';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, ReactChild } from 'react';
 
 export type Seo = {
     metaTitle: string;

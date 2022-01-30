@@ -35,7 +35,7 @@ const fetchPageBySlug = async (slug: string) => {
                 continue;
             }
 
-            pageData.articlesCollection.items[i].modulesCollection.items = await fetchModuleData(Modules, modules, client);
+            pageData.articlesCollection.items[i].modulesCollection.items = await fetchModuleData(Modules, modules);
         }
     }
 
