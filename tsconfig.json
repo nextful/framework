@@ -19,7 +19,8 @@
       "@nextful/api/*": ["lib/api/*"],
       "@nextful/modules/*": ["modules/*"],
       "@nextful/lib/*": ["lib/*"],
-      "@nextful/types/*": ["types/*"]
+      "@nextful/types/*": ["types/*"],
+      "@nextful/packages/*": ["packages/*"]
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
