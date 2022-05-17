@@ -92,10 +92,7 @@ const Module = createModule({
             ...dataTwo
         };
     },
-    query: gql`
-        
-    `,
-}9;
+)};
 
 export default Module;
 ```
